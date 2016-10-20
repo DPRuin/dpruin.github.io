@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
-  
+  <title>DPRuin</title>
+  <subtitle>求知若饥，虚心若愚</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="http://dpruin.com/"/>
   <updated>2016-10-20T08:18:16.000Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://dpruin.com/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>dpruin</name>
     
   </author>
   
@@ -17,8 +17,8 @@
   
   <entry>
     <title>who is da sheng</title>
-    <link href="http://yoursite.com/2016/10/20/who-is-da-sheng/"/>
-    <id>http://yoursite.com/2016/10/20/who-is-da-sheng/</id>
+    <link href="http://dpruin.com/2016/10/20/who-is-da-sheng/"/>
+    <id>http://dpruin.com/2016/10/20/who-is-da-sheng/</id>
     <published>2016-10-20T08:17:51.000Z</published>
     <updated>2016-10-20T08:18:16.000Z</updated>
     
@@ -36,9 +36,29 @@
   </entry>
   
   <entry>
+    <title>laoposong</title>
+    <link href="http://dpruin.com/2016/10/18/laoposong/"/>
+    <id>http://dpruin.com/2016/10/18/laoposong/</id>
+    <published>2016-10-18T13:37:58.000Z</published>
+    <updated>2016-10-20T08:22:27.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>laoposonglaoposonglaoposonglaoposong</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;laoposonglaoposonglaoposonglaoposong&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>zhouduan</title>
-    <link href="http://yoursite.com/2016/10/18/zhouduan/"/>
-    <id>http://yoursite.com/2016/10/18/zhouduan/</id>
+    <link href="http://dpruin.com/2016/10/18/zhouduan/"/>
+    <id>http://dpruin.com/2016/10/18/zhouduan/</id>
     <published>2016-10-18T13:37:58.000Z</published>
     <updated>2016-10-18T13:38:28.000Z</updated>
     
@@ -57,8 +77,8 @@
   
   <entry>
     <title>hhhhhhhhsdf</title>
-    <link href="http://yoursite.com/2016/10/18/hhhhhhhhsdf/"/>
-    <id>http://yoursite.com/2016/10/18/hhhhhhhhsdf/</id>
+    <link href="http://dpruin.com/2016/10/18/hhhhhhhhsdf/"/>
+    <id>http://dpruin.com/2016/10/18/hhhhhhhhsdf/</id>
     <published>2016-10-18T12:30:41.000Z</published>
     <updated>2016-10-18T12:31:00.000Z</updated>
     
@@ -76,8 +96,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2016/10/17/hello-world/"/>
-    <id>http://yoursite.com/2016/10/17/hello-world/</id>
+    <link href="http://dpruin.com/2016/10/17/hello-world/"/>
+    <id>http://dpruin.com/2016/10/17/hello-world/</id>
     <published>2016-10-17T14:17:35.000Z</published>
     <updated>2016-10-17T14:17:35.000Z</updated>
     
