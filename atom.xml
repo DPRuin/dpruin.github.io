@@ -4,9 +4,9 @@
   <subtitle>求知若饥，虚心若愚</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://dpruin.github.io/"/>
+  <link href="http://dp.github.io/"/>
   <updated>2016-10-20T08:18:16.000Z</updated>
-  <id>http://dpruin.github.io/</id>
+  <id>http://dp.github.io/</id>
   
   <author>
     <name>DPRuin</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>who is da sheng</title>
-    <link href="http://dpruin.github.io/2016/10/20/who-is-da-sheng/"/>
-    <id>http://dpruin.github.io/2016/10/20/who-is-da-sheng/</id>
+    <link href="http://dp.github.io/2016/10/20/who-is-da-sheng/"/>
+    <id>http://dp.github.io/2016/10/20/who-is-da-sheng/</id>
     <published>2016-10-20T08:17:51.000Z</published>
     <updated>2016-10-20T08:18:16.000Z</updated>
     
@@ -37,8 +37,8 @@
   
   <entry>
     <title>laoposong</title>
-    <link href="http://dpruin.github.io/2016/10/18/laoposong/"/>
-    <id>http://dpruin.github.io/2016/10/18/laoposong/</id>
+    <link href="http://dp.github.io/2016/10/18/laoposong/"/>
+    <id>http://dp.github.io/2016/10/18/laoposong/</id>
     <published>2016-10-18T13:37:58.000Z</published>
     <updated>2016-10-20T08:22:27.000Z</updated>
     
@@ -57,8 +57,8 @@
   
   <entry>
     <title>test谷歌广告</title>
-    <link href="http://dpruin.github.io/2016/10/18/testAds/"/>
-    <id>http://dpruin.github.io/2016/10/18/testAds/</id>
+    <link href="http://dp.github.io/2016/10/18/testAds/"/>
+    <id>http://dp.github.io/2016/10/18/testAds/</id>
     <published>2016-10-18T13:37:58.000Z</published>
     <updated>2016-10-21T02:18:58.000Z</updated>
     
@@ -78,14 +78,14 @@
     </summary>
     
     
-      <category term="谷歌" scheme="http://dpruin.github.io/tags/%E8%B0%B7%E6%AD%8C/"/>
+      <category term="谷歌" scheme="http://dp.github.io/tags/%E8%B0%B7%E6%AD%8C/"/>
     
   </entry>
   
   <entry>
     <title>我是大鹏</title>
-    <link href="http://dpruin.github.io/2016/10/18/woshidapeng/"/>
-    <id>http://dpruin.github.io/2016/10/18/woshidapeng/</id>
+    <link href="http://dp.github.io/2016/10/18/woshidapeng/"/>
+    <id>http://dp.github.io/2016/10/18/woshidapeng/</id>
     <published>2016-10-18T12:30:41.000Z</published>
     <updated>2016-10-21T12:10:57.000Z</updated>
     
@@ -104,8 +104,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://dpruin.github.io/2016/10/17/hello-world/"/>
-    <id>http://dpruin.github.io/2016/10/17/hello-world/</id>
+    <link href="http://dp.github.io/2016/10/17/hello-world/"/>
+    <id>http://dp.github.io/2016/10/17/hello-world/</id>
     <published>2016-10-17T14:17:35.000Z</published>
     <updated>2016-10-17T14:17:35.000Z</updated>
     
