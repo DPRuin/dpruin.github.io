@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dpruin.github.io/"/>
-  <updated>2016-10-21T15:00:06.000Z</updated>
+  <updated>2016-10-24T09:07:52.000Z</updated>
   <id>http://dpruin.github.io/</id>
   
   <author>
@@ -16,24 +16,40 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>hangyelieren</title>
-    <link href="http://dpruin.github.io/2016/10/21/hangyelieren/"/>
-    <id>http://dpruin.github.io/2016/10/21/hangyelieren/</id>
+    <title>AppStore上架报ERROR ITMS-90535</title>
+    <link href="http://dpruin.github.io/2016/10/21/Archive_ERRORITEMS-90535/"/>
+    <id>http://dpruin.github.io/2016/10/21/Archive_ERRORITEMS-90535/</id>
     <published>2016-10-21T13:30:06.000Z</published>
-    <updated>2016-10-21T15:00:06.000Z</updated>
+    <updated>2016-10-24T09:07:52.000Z</updated>
     
-    <content type="html"><![CDATA[<p>荒野猎人荒野猎人荒野猎人荒野猎人荒野猎人</p>
+    <content type="html"><![CDATA[<h3 id="AppStore上架报ERROR-ITMS-90535错误"><a href="#AppStore上架报ERROR-ITMS-90535错误" class="headerlink" title="AppStore上架报ERROR ITMS-90535错误"></a>AppStore上架报ERROR ITMS-90535错误</h3><h4 id="错误经过"><a href="#错误经过" class="headerlink" title="错误经过"></a>错误经过</h4><p>使用xcode7打包上传公司的app，app上架–&gt;Archive–&gt;validate过后，并且SUCCESSFUL了。然后开始上传到AppStore时，出现以下错误</p>
+<ul>
+<li><p>This action could not be completed. Try again<br><img src="/images/Archive_ERRORITEMS-90535_1.png" alt="error1"></p>
+</li>
+<li><p>This action could not be completed. Try again.(-22421)<br><img src="/images/Archive_ERRORITEMS-90535_2.png" alt="error2"></p>
+</li>
+<li><p>ERROR ITMS-90535错误<br><img src="/images/Archive_ERRORITEMS-90535_3.png" alt="error3"></p>
+</li>
+</ul>
+<h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><ul>
+<li><p>“This action could not be completed. Try again”报错是苹果服务器的原因， 再试一次就好了。我是重复了2次就好了，换了时间段重新上传的就成功了</p>
+</li>
+<li><p>“ERROR ITMS-90535”根据报错的信息是EaseUIResource.Bundle文件出错</p>
+</li>
+</ul>
+<h4 id="解决问题"><a href="#解决问题" class="headerlink" title="解决问题"></a>解决问题</h4><p>找到相应的bundle包，打开plist文件，删除CFBundleExecutable即可 CFBundleExecutable 在info.plist文件中显示为Executable file<br><img src="/images/Archive_ERRORITEMS-90535_4.png" alt="solve"></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;荒野猎人荒野猎人荒野猎人荒野猎人荒野猎人&lt;/p&gt;
-
+      &lt;h3 id=&quot;AppStore上架报ERROR-ITMS-90535错误&quot;&gt;&lt;a href=&quot;#AppStore上架报ERROR-ITMS-90535错误&quot; class=&quot;headerlink&quot; title=&quot;AppStore上架报ERROR ITMS-90535错误&quot;&gt;&lt;/a
     
     </summary>
     
     
-      <category term="电影" scheme="http://dpruin.github.io/tags/%E7%94%B5%E5%BD%B1/"/>
+      <category term="Archive" scheme="http://dpruin.github.io/tags/Archive/"/>
+    
+      <category term="Error" scheme="http://dpruin.github.io/tags/Error/"/>
     
   </entry>
   
