@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dpruin.github.io/"/>
-  <updated>2016-10-24T09:07:52.000Z</updated>
+  <updated>2016-10-24T11:43:53.000Z</updated>
   <id>http://dpruin.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://dpruin.github.io/2016/10/21/Archive_ERRORITEMS-90535/"/>
     <id>http://dpruin.github.io/2016/10/21/Archive_ERRORITEMS-90535/</id>
     <published>2016-10-21T13:30:06.000Z</published>
-    <updated>2016-10-24T09:07:52.000Z</updated>
+    <updated>2016-10-24T11:43:53.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="AppStore上架报ERROR-ITMS-90535错误"><a href="#AppStore上架报ERROR-ITMS-90535错误" class="headerlink" title="AppStore上架报ERROR ITMS-90535错误"></a>AppStore上架报ERROR ITMS-90535错误</h3><h4 id="错误经过"><a href="#错误经过" class="headerlink" title="错误经过"></a>错误经过</h4><p>使用xcode7打包上传公司的app，app上架–&gt;Archive–&gt;validate过后，并且SUCCESSFUL了。然后开始上传到AppStore时，出现以下错误</p>
 <ul>
@@ -74,22 +74,31 @@
   </entry>
   
   <entry>
-    <title>laoposong</title>
-    <link href="http://dpruin.github.io/2016/10/18/laoposong/"/>
-    <id>http://dpruin.github.io/2016/10/18/laoposong/</id>
+    <title>Xcode8_Warning_Couldn’t communicate with a helper application.</title>
+    <link href="http://dpruin.github.io/2016/10/18/Xcode_Warning_commit/"/>
+    <id>http://dpruin.github.io/2016/10/18/Xcode_Warning_commit/</id>
     <published>2016-10-18T13:37:58.000Z</published>
-    <updated>2016-10-20T08:22:27.000Z</updated>
+    <updated>2016-10-26T03:20:34.000Z</updated>
     
-    <content type="html"><![CDATA[<p>laoposonglaoposonglaoposonglaoposong</p>
+    <content type="html"><![CDATA[<h3 id="Xcode8-Warning-Couldn’t-communicate-with-a-helper-application"><a href="#Xcode8-Warning-Couldn’t-communicate-with-a-helper-application" class="headerlink" title="Xcode8_Warning_Couldn’t communicate with a helper application."></a>Xcode8_Warning_Couldn’t communicate with a helper application.</h3><h4 id="警告"><a href="#警告" class="headerlink" title="警告"></a>警告</h4><ul>
+<li>升级Xcode8后提交代码，执行commit操作，出现以下警告<br><img src="/images/commit_warning" alt="commit_warning"></li>
+<li>升级Xcode8后shift + common + n 创建project，出现以下警告<br><img src="/images/newproject_warning" alt="newproject_warning"></li>
+</ul>
+<h4 id="分析原因"><a href="#分析原因" class="headerlink" title="分析原因"></a>分析原因</h4><p>Couldn’t communicate with a helper application. 无法与辅助应用程序通信。mac里git需要重新配置。新建project，xcode提醒开发者不能执行commit操作</p>
+<h4 id="解决问题"><a href="#解决问题" class="headerlink" title="解决问题"></a>解决问题</h4><p>打开终端，执行以下命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">git config --global user.name ###</div><div class="line">git config --global user.email ##@##.com</div><div class="line"></div><div class="line">git config -l // 查看</div></pre></td></tr></table></figure>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;laoposonglaoposonglaoposonglaoposong&lt;/p&gt;
-
+      &lt;h3 id=&quot;Xcode8-Warning-Couldn’t-communicate-with-a-helper-application&quot;&gt;&lt;a href=&quot;#Xcode8-Warning-Couldn’t-communicate-with-a-helper-applicati
     
     </summary>
     
+    
+      <category term="Xcode" scheme="http://dpruin.github.io/tags/Xcode/"/>
+    
+      <category term="Warning" scheme="http://dpruin.github.io/tags/Warning/"/>
     
   </entry>
   
