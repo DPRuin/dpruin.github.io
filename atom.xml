@@ -78,7 +78,7 @@
     <link href="http://dpruin.github.io/2016/10/18/Xcode_Warning_commit/"/>
     <id>http://dpruin.github.io/2016/10/18/Xcode_Warning_commit/</id>
     <published>2016-10-18T13:37:58.000Z</published>
-    <updated>2016-10-26T03:33:53.000Z</updated>
+    <updated>2016-10-26T03:43:43.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="Xcode8-Warning-Couldn’t-communicate-with-a-helper-application"><a href="#Xcode8-Warning-Couldn’t-communicate-with-a-helper-application" class="headerlink" title="Xcode8_Warning_Couldn’t communicate with a helper application."></a>Xcode8_Warning_Couldn’t communicate with a helper application.</h3><h4 id="警告"><a href="#警告" class="headerlink" title="警告"></a>警告</h4><ul>
 <li>升级Xcode8后提交代码，执行commit操作，出现以下警告<br><img src="/images/commit_warning.png" alt="commit_warning"></li>
@@ -130,22 +130,45 @@
   </entry>
   
   <entry>
-    <title>我是大鹏</title>
-    <link href="http://dpruin.github.io/2016/10/18/woshidapeng/"/>
-    <id>http://dpruin.github.io/2016/10/18/woshidapeng/</id>
+    <title>iOS单元测试</title>
+    <link href="http://dpruin.github.io/2016/10/18/UnitTest/"/>
+    <id>http://dpruin.github.io/2016/10/18/UnitTest/</id>
     <published>2016-10-18T12:30:41.000Z</published>
-    <updated>2016-10-21T12:10:57.000Z</updated>
+    <updated>2016-11-10T09:09:11.000Z</updated>
     
-    <content type="html"><![CDATA[<p>我是到大鹏哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈<br>哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</p>
+    <content type="html"><![CDATA[<h3 id="iOS单元测试"><a href="#iOS单元测试" class="headerlink" title="iOS单元测试"></a>iOS单元测试</h3><h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><ul>
+<li>单元测试使用XCTest框架</li>
+<li>单元测试的目标：模型文件</li>
+<li>用处：不基于界面UI的情况下，保证模型类的逻辑正确</li>
+</ul>
+<h4 id="创建单元测试"><a href="#创建单元测试" class="headerlink" title="创建单元测试"></a>创建单元测试</h4><ul>
+<li>File——New——Target——iOS Unit Testing Bundle</li>
+<li>也可以如下图操作<br><img src="/images/unittest_1" alt=""></li>
+</ul>
+<h4 id="默认方法"><a href="#默认方法" class="headerlink" title="默认方法"></a>默认方法</h4><ul>
+<li>测试用例文件名约定：以测试类名起始，添加Tests结尾, 如PersonTests.m</li>
+<li>类中以test开头的方法且void返回类型的方法都会变成单元测试用例，如下</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">- (void)testAge</div><div class="line">&#123;</div><div class="line">    // 在单元测试中一定要有边界测试</div><div class="line">    Person *p = [[Person alloc] init];</div><div class="line">    p.age = 17;</div><div class="line">    XCTAssertTrue(p.age &gt;= 18, @&quot;年龄应该大于或等于18岁&quot;);</div><div class="line">    p.age = 61;</div><div class="line">    XCTAssertTrue(p.age &lt;= 60, @&quot;年龄应该小于或等于60岁&quot;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>默认方法</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">// 每次测试前调用，可以在测试之前创建在test case方法中需要用到的一些对象等</div><div class="line">- (void)setUp</div><div class="line"></div><div class="line">// 每次测试结束时调用</div><div class="line">- (void)tearDown</div><div class="line"></div><div class="line">//性能测试方法，通过测试block中方法执行的时间，比对设定的标准值和偏差觉得是否可以通过测试</div><div class="line">    [self measureBlock:^&#123;</div><div class="line">        // Put the code you want to measure the time of here.</div><div class="line">        for (int i = 0; i &lt; 1000; i++) &#123;</div><div class="line">            NSLog(@&quot;时间&quot;);</div><div class="line">        &#125;</div><div class="line">    &#125;];</div></pre></td></tr></table></figure>
+<h4 id="断言"><a href="#断言" class="headerlink" title="断言"></a>断言</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">XCTAssert(expression, format...)</div><div class="line"></div><div class="line">//Bool测试:  </div><div class="line">XCTAssertTrue(expression, format...)</div><div class="line">XCTAssertFalse(expression, format...)</div><div class="line"></div><div class="line">//相等测试</div><div class="line">XCTAssertEqual(expression1, expression2, format...)</div><div class="line">XCTAssertNotEqual(expression1, expression2, format...)</div><div class="line"></div><div class="line">//double float 对比数据测试使用</div><div class="line">XCTAssertEqualWithAccuracy(expression1, expression2, accuracy, format...)</div><div class="line">XCTAssertNotEqualWithAccuracy(expression1, expression2, accuracy, format...)</div><div class="line"></div><div class="line">//Nil测试，XCTAssert[Not]Nil断言判断给定的表达式值是否为nil</div><div class="line">XCTAssertNil(expression, format...)</div><div class="line">XCTAssertNotNil(expression, format...)</div><div class="line"></div><div class="line">//失败断言     </div><div class="line">XCTFail(format...)</div></pre></td></tr></table></figure>
+<h4 id="期望"><a href="#期望" class="headerlink" title="期望"></a>期望</h4><ul>
+<li>需要在一定时间之后再进行判断的测试例，可以使用 expectationForPredicate 来对未来的状态作出假设并测试在规定的超时时间内是否得到理想的结果</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">[self expectationForPredicate: 谓词 evaluatedWithObject:被测试对象 handler:nil];</div><div class="line"></div><div class="line">// 设置期望的时间</div><div class="line">[self waitForExpectationsWithTimeout:超时时间 handler: nil];</div></pre></td></tr></table></figure>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;我是到大鹏哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈&lt;br&gt;哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈&lt;/p&gt;
-
+      &lt;h3 id=&quot;iOS单元测试&quot;&gt;&lt;a href=&quot;#iOS单元测试&quot; class=&quot;headerlink&quot; title=&quot;iOS单元测试&quot;&gt;&lt;/a&gt;iOS单元测试&lt;/h3&gt;&lt;h4 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前
     
     </summary>
     
+    
+      <category term="Unit Test" scheme="http://dpruin.github.io/tags/Unit-Test/"/>
     
   </entry>
   
