@@ -54,22 +54,25 @@
   </entry>
   
   <entry>
-    <title>who is da sheng</title>
-    <link href="http://dpruin.github.io/2016/10/20/who-is-da-sheng/"/>
-    <id>http://dpruin.github.io/2016/10/20/who-is-da-sheng/</id>
+    <title>iOS UI测试</title>
+    <link href="http://dpruin.github.io/2016/10/20/UITesting/"/>
+    <id>http://dpruin.github.io/2016/10/20/UITesting/</id>
     <published>2016-10-20T08:17:51.000Z</published>
-    <updated>2016-10-20T08:18:16.000Z</updated>
+    <updated>2016-11-10T09:16:04.000Z</updated>
     
-    <content type="html"><![CDATA[<p>who is da shengwho is da shengwho is da sheng</p>
+    <content type="html"><![CDATA[<h3 id="iOS-UI测试"><a href="#iOS-UI测试" class="headerlink" title="iOS UI测试"></a>iOS UI测试</h3><h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>#### </p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;who is da shengwho is da shengwho is da sheng&lt;/p&gt;
-
+      &lt;h3 id=&quot;iOS-UI测试&quot;&gt;&lt;a href=&quot;#iOS-UI测试&quot; class=&quot;headerlink&quot; title=&quot;iOS UI测试&quot;&gt;&lt;/a&gt;iOS UI测试&lt;/h3&gt;&lt;h4 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; titl
     
     </summary>
     
+    
+      <category term="UITesting" scheme="http://dpruin.github.io/tags/UITesting/"/>
+    
+      <category term="测试" scheme="http://dpruin.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
     
   </entry>
   
@@ -134,7 +137,7 @@
     <link href="http://dpruin.github.io/2016/10/18/UnitTest/"/>
     <id>http://dpruin.github.io/2016/10/18/UnitTest/</id>
     <published>2016-10-18T12:30:41.000Z</published>
-    <updated>2016-11-10T09:09:11.000Z</updated>
+    <updated>2016-11-10T09:20:27.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="iOS单元测试"><a href="#iOS单元测试" class="headerlink" title="iOS单元测试"></a>iOS单元测试</h3><h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><ul>
 <li>单元测试使用XCTest框架</li>
@@ -143,7 +146,7 @@
 </ul>
 <h4 id="创建单元测试"><a href="#创建单元测试" class="headerlink" title="创建单元测试"></a>创建单元测试</h4><ul>
 <li>File——New——Target——iOS Unit Testing Bundle</li>
-<li>也可以如下图操作<br><img src="/images/unittest_1" alt=""></li>
+<li>也可以如下图操作<br><img src="/images/unittest_1.png" alt=""></li>
 </ul>
 <h4 id="默认方法"><a href="#默认方法" class="headerlink" title="默认方法"></a>默认方法</h4><ul>
 <li>测试用例文件名约定：以测试类名起始，添加Tests结尾, 如PersonTests.m</li>
