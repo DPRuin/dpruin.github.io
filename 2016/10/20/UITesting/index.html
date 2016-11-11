@@ -10,16 +10,52 @@
   
   
   <meta name="keywords" content="UITesting,测试">
-  <meta name="description" content="iOS UI测试前言####">
+  <meta name="description" content="iOS UI测试前言
+UITesting 和 Accessibility
+测试app的功能和UI界面是否正确, UI测试可以省去人为直接操作app进行测试。
+
+创建UI测试
+File——New——Target——iOS UI Testing Bundle
+也可以如下图操作
+
+代码
+前提须写的代码：设置UI控件accessibilityIdentifier属性
+
+12345678- (void)vi">
 <meta property="og:type" content="article">
 <meta property="og:title" content="iOS UI测试">
 <meta property="og:url" content="http://dpruin.github.io/2016/10/20/UITesting/index.html">
 <meta property="og:site_name" content="DPRuin">
-<meta property="og:description" content="iOS UI测试前言####">
-<meta property="og:updated_time" content="2016-11-10T09:16:04.000Z">
+<meta property="og:description" content="iOS UI测试前言
+UITesting 和 Accessibility
+测试app的功能和UI界面是否正确, UI测试可以省去人为直接操作app进行测试。
+
+创建UI测试
+File——New——Target——iOS UI Testing Bundle
+也可以如下图操作
+
+代码
+前提须写的代码：设置UI控件accessibilityIdentifier属性
+
+12345678- (void)vi">
+<meta property="og:image" content="http://dpruin.github.io/images/UITesting_1.png">
+<meta property="og:image" content="http://dpruin.github.io/images/UITesting_2.png">
+<meta property="og:updated_time" content="2016-11-11T01:51:29.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS UI测试">
-<meta name="twitter:description" content="iOS UI测试前言####">
+<meta name="twitter:description" content="iOS UI测试前言
+UITesting 和 Accessibility
+测试app的功能和UI界面是否正确, UI测试可以省去人为直接操作app进行测试。
+
+创建UI测试
+File——New——Target——iOS UI Testing Bundle
+也可以如下图操作
+
+代码
+前提须写的代码：设置UI控件accessibilityIdentifier属性
+
+12345678- (void)vi">
+<meta name="twitter:image" content="http://dpruin.github.io/images/UITesting_1.png">
   
     <link rel="alternative" href="/atom.xml" title="DPRuin" type="application/atom+xml">
   
@@ -189,7 +225,7 @@
 
             
             <nav class="post-toc-wrap" id="post-toc">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#iOS-UI测试"><span class="post-toc-number">1.</span> <span class="post-toc-text">iOS UI测试</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#前言"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">前言</span></a></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#iOS-UI测试"><span class="post-toc-number">1.</span> <span class="post-toc-text">iOS UI测试</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#前言"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">前言</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#创建UI测试"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">创建UI测试</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#代码"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">代码</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#UI行为录制"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">UI行为录制</span></a></li></ol></li></ol>
             </nav>
             
 
@@ -208,7 +244,25 @@
         <div class="post-main">
 
             <div class="post-content" id="post-content" itemprop="postContent">
-            <h3 id="iOS-UI测试"><a href="#iOS-UI测试" class="headerlink" title="iOS UI测试"></a>iOS UI测试</h3><h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>#### </p>
+            <h3 id="iOS-UI测试"><a href="#iOS-UI测试" class="headerlink" title="iOS UI测试"></a>iOS UI测试</h3><h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><ul>
+<li>UITesting 和 Accessibility</li>
+<li>测试app的功能和UI界面是否正确, UI测试可以省去人为直接操作app进行测试。</li>
+</ul>
+<h4 id="创建UI测试"><a href="#创建UI测试" class="headerlink" title="创建UI测试"></a>创建UI测试</h4><ul>
+<li>File——New——Target——iOS UI Testing Bundle</li>
+<li>也可以如下图操作<br><img src="/images/UITesting_1.png" alt=""></li>
+</ul>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><ul>
+<li>前提须写的代码：设置UI控件accessibilityIdentifier属性</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">- (void)viewDidLoad &#123;</div><div class="line">    [super viewDidLoad];</div><div class="line">    self.userTextField.accessibilityIdentifier = @&quot;userTextField&quot;;</div><div class="line">    self.passwordTextField.accessibilityIdentifier = @&quot;passwordTextField&quot;;</div><div class="line">    // 辅助标识</div><div class="line">    self.loginBtn.accessibilityIdentifier = @&quot;login&quot;;</div><div class="line">    </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>测试样例</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">- (void)testEmptyUserNameAndPassword &#123;</div><div class="line">    </div><div class="line">    // XCUIApplication app对象代理 继承自XCUIElement</div><div class="line">    XCUIApplication *app = [[XCUIApplication alloc] init];</div><div class="line">    [app.buttons[@&quot;login&quot;] tap];</div><div class="line">    </div><div class="line">    // XCUIElement UI元素的代理</div><div class="line">    XCUIElement *label = app.alerts.staticTexts[@&quot;Empty username/password&quot;];</div><div class="line">    </div><div class="line">    // XCUIElementQuery 查询UI元素的类</div><div class="line">    XCUIElementQuery *alerts = app.alerts;</div><div class="line">    </div><div class="line">    NSPredicate *alertCount = [NSPredicate predicateWithFormat:@&quot;count == 1&quot;]; // XCUIElementQuery有count属性 ，元素数量</div><div class="line">    NSPredicate *labelExist = [NSPredicate predicateWithFormat:@&quot;exists == 1&quot;]; // XCUIElement有exists属性，是否存在</div><div class="line">    </div><div class="line">    [self expectationForPredicate:alertCount evaluatedWithObject:alerts handler:nil];</div><div class="line">    [self expectationForPredicate:labelExist evaluatedWithObject:label handler:nil];</div><div class="line">    </div><div class="line">    [self waitForExpectationsWithTimeout:5 handler: nil];</div><div class="line">    </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="UI行为录制"><a href="#UI行为录制" class="headerlink" title="UI行为录制"></a>UI行为录制</h4><ul>
+<li>将输入光标放在方法实现中，并点击工具栏上的录制按钮，就可以进行实时录制了<br><img src="/images/UITesting_2.png" alt=""></li>
+</ul>
 
 
             

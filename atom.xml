@@ -58,9 +58,27 @@
     <link href="http://dpruin.github.io/2016/10/20/UITesting/"/>
     <id>http://dpruin.github.io/2016/10/20/UITesting/</id>
     <published>2016-10-20T08:17:51.000Z</published>
-    <updated>2016-11-10T09:16:04.000Z</updated>
+    <updated>2016-11-11T01:51:29.000Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="iOS-UI测试"><a href="#iOS-UI测试" class="headerlink" title="iOS UI测试"></a>iOS UI测试</h3><h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>#### </p>
+    <content type="html"><![CDATA[<h3 id="iOS-UI测试"><a href="#iOS-UI测试" class="headerlink" title="iOS UI测试"></a>iOS UI测试</h3><h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><ul>
+<li>UITesting 和 Accessibility</li>
+<li>测试app的功能和UI界面是否正确, UI测试可以省去人为直接操作app进行测试。</li>
+</ul>
+<h4 id="创建UI测试"><a href="#创建UI测试" class="headerlink" title="创建UI测试"></a>创建UI测试</h4><ul>
+<li>File——New——Target——iOS UI Testing Bundle</li>
+<li>也可以如下图操作<br><img src="/images/UITesting_1.png" alt=""></li>
+</ul>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><ul>
+<li>前提须写的代码：设置UI控件accessibilityIdentifier属性</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">- (void)viewDidLoad &#123;</div><div class="line">    [super viewDidLoad];</div><div class="line">    self.userTextField.accessibilityIdentifier = @&quot;userTextField&quot;;</div><div class="line">    self.passwordTextField.accessibilityIdentifier = @&quot;passwordTextField&quot;;</div><div class="line">    // 辅助标识</div><div class="line">    self.loginBtn.accessibilityIdentifier = @&quot;login&quot;;</div><div class="line">    </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>测试样例</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">- (void)testEmptyUserNameAndPassword &#123;</div><div class="line">    </div><div class="line">    // XCUIApplication app对象代理 继承自XCUIElement</div><div class="line">    XCUIApplication *app = [[XCUIApplication alloc] init];</div><div class="line">    [app.buttons[@&quot;login&quot;] tap];</div><div class="line">    </div><div class="line">    // XCUIElement UI元素的代理</div><div class="line">    XCUIElement *label = app.alerts.staticTexts[@&quot;Empty username/password&quot;];</div><div class="line">    </div><div class="line">    // XCUIElementQuery 查询UI元素的类</div><div class="line">    XCUIElementQuery *alerts = app.alerts;</div><div class="line">    </div><div class="line">    NSPredicate *alertCount = [NSPredicate predicateWithFormat:@&quot;count == 1&quot;]; // XCUIElementQuery有count属性 ，元素数量</div><div class="line">    NSPredicate *labelExist = [NSPredicate predicateWithFormat:@&quot;exists == 1&quot;]; // XCUIElement有exists属性，是否存在</div><div class="line">    </div><div class="line">    [self expectationForPredicate:alertCount evaluatedWithObject:alerts handler:nil];</div><div class="line">    [self expectationForPredicate:labelExist evaluatedWithObject:label handler:nil];</div><div class="line">    </div><div class="line">    [self waitForExpectationsWithTimeout:5 handler: nil];</div><div class="line">    </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="UI行为录制"><a href="#UI行为录制" class="headerlink" title="UI行为录制"></a>UI行为录制</h4><ul>
+<li>将输入光标放在方法实现中，并点击工具栏上的录制按钮，就可以进行实时录制了<br><img src="/images/UITesting_2.png" alt=""></li>
+</ul>
 ]]></content>
     
     <summary type="html">
