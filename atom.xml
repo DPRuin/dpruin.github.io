@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dpruin.github.io/"/>
-  <updated>2016-10-24T11:43:53.000Z</updated>
+  <updated>2016-12-20T06:23:42.000Z</updated>
   <id>http://dpruin.github.io/</id>
   
   <author>
@@ -14,6 +14,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Cocopods_Expected identifier or &quot;(&quot;    ,Expected a type</title>
+    <link href="http://dpruin.github.io/2016/12/20/Cocopods_Expected%20identifier/"/>
+    <id>http://dpruin.github.io/2016/12/20/Cocopods_Expected identifier/</id>
+    <published>2016-12-20T06:15:21.000Z</published>
+    <updated>2016-12-20T06:23:42.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Cocopods-Expected-identifier-or-“-“-Expected-a-type"><a href="#Cocopods-Expected-identifier-or-“-“-Expected-a-type" class="headerlink" title="Cocopods_Expected identifier or “(“    ,Expected a type"></a>Cocopods_Expected identifier or “(“    ,Expected a type</h3><h4 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h4><p>Parse Issue：Expected identifier or “(“    ,Expected a type<br><img src="/images/cocopods_1.png" alt=""></p>
+<h4 id="分析与参考"><a href="#分析与参考" class="headerlink" title="分析与参考"></a>分析与参考</h4><p>参考： <a href="http://www.egeek.me/2013/01/26/note-about-building-cocoapods-powered-ios-projects/" target="_blank" rel="external">http://www.egeek.me/2013/01/26/note-about-building-cocoapods-powered-ios-projects/</a><br>参考以上windows 和OSX系统不同,因 rsa.h文件未正常引入导致，还和cocopods有关系</p>
+<h4 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h4><p>cd到项目目录 执行pod update操作</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">youbaobaodeMac-mini:~ youbaobao$ pod --version</div><div class="line">1.0.1</div><div class="line">youbaobaodeMac-mini:~ youbaobao$ cd ......</div><div class="line">youbaobaodeMac-mini:sourceCode youbaobao$ pod update</div><div class="line">Update all pods</div><div class="line">Re-creating CocoaPods due to major version update.</div><div class="line">Setting up CocoaPods master repo</div><div class="line">[!] Unable to add a source with url `https://github.com/CocoaPods/Specs.git` named `master-1`.</div><div class="line">You can try adding it manually in `~/.cocoapods/repos` or via `pod repo add`.</div><div class="line">youbaobaodeMac-mini:sourceCode youbaobao$</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;Cocopods-Expected-identifier-or-“-“-Expected-a-type&quot;&gt;&lt;a href=&quot;#Cocopods-Expected-identifier-or-“-“-Expected-a-type&quot; class=&quot;headerlin
+    
+    </summary>
+    
+    
+      <category term="bug" scheme="http://dpruin.github.io/tags/bug/"/>
+    
+      <category term="Cocopods" scheme="http://dpruin.github.io/tags/Cocopods/"/>
+    
+      <category term="Xcode" scheme="http://dpruin.github.io/tags/Xcode/"/>
+    
+  </entry>
   
   <entry>
     <title>AppStore上架报ERROR ITMS-90535</title>
@@ -95,6 +123,31 @@
   </entry>
   
   <entry>
+    <title>Swift3.0相对于2.3语法的一些变化</title>
+    <link href="http://dpruin.github.io/2016/10/18/Swift3.0WithSwift2.3Changes/"/>
+    <id>http://dpruin.github.io/2016/10/18/Swift3.0WithSwift2.3Changes/</id>
+    <published>2016-10-18T13:37:58.000Z</published>
+    <updated>2016-11-14T09:50:02.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Swift3-0相对于2-3语法的一些变化"><a href="#Swift3-0相对于2-3语法的一些变化" class="headerlink" title="Swift3.0相对于2.3语法的一些变化"></a>Swift3.0相对于2.3语法的一些变化</h3><h4 id="颜色"><a href="#颜色" class="headerlink" title="颜色"></a>颜色</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">// swift 2.3</div><div class="line">view.backgroundColor = UIColor.redColor()</div><div class="line"></div><div class="line">// swift 3.0</div><div class="line">view.backgroundColor = UIColor.red</div></pre></td></tr></table></figure>
+<h4 id="swift-3-0-删掉了-–"><a href="#swift-3-0-删掉了-–" class="headerlink" title="swift 3.0 删掉了++ –"></a>swift 3.0 删掉了++ –</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">// swift 2.3</div><div class="line">var a = 0</div><div class="line">a++</div><div class="line">a--</div><div class="line"></div><div class="line">// swift 3.0 删掉了++ -- </div><div class="line">var a = 0</div><div class="line">a += 1</div><div class="line">a -= 1</div></pre></td></tr></table></figure>
+<h4 id="Swift-3-0-任意对象AnyObject-简化为Any"><a href="#Swift-3-0-任意对象AnyObject-简化为Any" class="headerlink" title="Swift 3.0 任意对象AnyObject 简化为Any"></a>Swift 3.0 任意对象AnyObject 简化为Any</h4><h4 id="inout关键字放在参数名称的后面"><a href="#inout关键字放在参数名称的后面" class="headerlink" title="inout关键字放在参数名称的后面"></a>inout关键字放在参数名称的后面</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">// swift 2.3</div><div class="line">func swap1(inout a : Int, inout b : Int) &#123;</div><div class="line">    let temp = a</div><div class="line">    a = b</div><div class="line">    b = temp</div><div class="line"></div><div class="line">    print(&quot;a:\(a), b:\(b)&quot;)</div><div class="line">&#125;</div><div class="line"></div><div class="line">// swift 3.0 inout关键字放在参数名称的后面</div><div class="line">func swap( a: inout Int, b: inout Int) &#123;</div><div class="line">    let temp = a</div><div class="line">    a = b</div><div class="line">    b = temp</div><div class="line">    </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="闭包-和-GCD"><a href="#闭包-和-GCD" class="headerlink" title="闭包 和 GCD"></a>闭包 和 GCD</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line">// swift 2.3</div><div class="line">class HttpTool: NSObject &#123;</div><div class="line"></div><div class="line">    func loadRequest(callBack : ()-&gt;())&#123;</div><div class="line">        dispatch_async(dispatch_get_global_queue(0, 0)) &#123; () -&gt; Void in</div><div class="line">            print(&quot;加载数据&quot;, [NSThread.currentThread()])</div><div class="line"></div><div class="line">             dispatch_async(dispatch_get_main_queue(), &#123; () -&gt; Void in</div><div class="line">                callBack()</div><div class="line">             &#125;)</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">    override func touchesBegan(touches: Set&lt;UITouch&gt;, withEvent event: UIEvent?) &#123;</div><div class="line">        // 网络请求</div><div class="line">        httpTool.loadRequest (&#123; () -&gt; () in</div><div class="line">            print(&quot;回到主线程&quot;, NSThread.currentThread());</div><div class="line">        &#125;)</div><div class="line">    &#125;</div><div class="line"></div><div class="line">// swift 3.0</div><div class="line">class HttpTool : NSObject &#123;</div><div class="line">    </div><div class="line">    func loadRequest(callBack:  @escaping ()-&gt;()) &#123;</div><div class="line">        </div><div class="line">        DispatchQueue.global().async &#123;</div><div class="line">            print(&quot;加载数据&quot;, Thread.current)</div><div class="line">            DispatchQueue.main.async &#123;</div><div class="line">                callBack()</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">HttpTool().loadRequest &#123;</div><div class="line">    print(&quot;HH&quot;)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="swift3-0-去掉了lazy关键字"><a href="#swift3-0-去掉了lazy关键字" class="headerlink" title="swift3.0 去掉了lazy关键字"></a>swift3.0 去掉了lazy关键字</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">// swift 2.3</div><div class="line">    lazy var array : [String] = &#123;</div><div class="line">        () -&gt; [String] in</div><div class="line">        return [&quot;why&quot;, &quot;lmj&quot;, &quot;lnj&quot;]</div><div class="line">    &#125;()</div><div class="line">    </div><div class="line">// swift 3.0 去掉了lazy关键字</div><div class="line">var array : [String] = &#123;</div><div class="line">    </div><div class="line">    return [&quot;lisi&quot;, &quot;zhangsan&quot;, &quot;wangmazi&quot;];</div><div class="line">    </div><div class="line">&#125;()</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;Swift3-0相对于2-3语法的一些变化&quot;&gt;&lt;a href=&quot;#Swift3-0相对于2-3语法的一些变化&quot; class=&quot;headerlink&quot; title=&quot;Swift3.0相对于2.3语法的一些变化&quot;&gt;&lt;/a&gt;Swift3.0相对于2.3语法的一些变化&lt;/
+    
+    </summary>
+    
+    
+      <category term="Swift" scheme="http://dpruin.github.io/tags/Swift/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Xcode8_Warning_Couldn’t communicate with a helper application.</title>
     <link href="http://dpruin.github.io/2016/10/18/Xcode_Warning_commit/"/>
     <id>http://dpruin.github.io/2016/10/18/Xcode_Warning_commit/</id>
@@ -120,33 +173,6 @@
       <category term="Xcode" scheme="http://dpruin.github.io/tags/Xcode/"/>
     
       <category term="Warning" scheme="http://dpruin.github.io/tags/Warning/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>test谷歌广告</title>
-    <link href="http://dpruin.github.io/2016/10/18/testAds/"/>
-    <id>http://dpruin.github.io/2016/10/18/testAds/</id>
-    <published>2016-10-18T13:37:58.000Z</published>
-    <updated>2016-10-21T02:18:58.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>zhouduanzhouduanzhouduanzhouduanzhouduanzhouduanzhouduan<br>大事发生地方</p>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- ad1 -->
-<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6032542897743404" data-ad-slot="8497837172" data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;zhouduanzhouduanzhouduanzhouduanzhouduanzhouduanzhouduan&lt;br&gt;大事发生地方&lt;/p&gt;
-&lt;script async src=&quot;//pagead2.googlesyndication.com/pagead/js/adsby
-    
-    </summary>
-    
-    
-      <category term="谷歌" scheme="http://dpruin.github.io/tags/%E8%B0%B7%E6%AD%8C/"/>
     
   </entry>
   
@@ -190,33 +216,6 @@
     
     
       <category term="Unit Test" scheme="http://dpruin.github.io/tags/Unit-Test/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://dpruin.github.io/2016/10/17/hello-world/"/>
-    <id>http://dpruin.github.io/2016/10/17/hello-world/</id>
-    <published>2016-10-17T14:17:35.000Z</published>
-    <updated>2016-10-17T14:17:35.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-    
-    </summary>
-    
     
   </entry>
   
