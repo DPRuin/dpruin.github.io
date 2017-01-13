@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dpruin.github.io/"/>
-  <updated>2016-12-20T06:23:42.000Z</updated>
+  <updated>2017-01-13T03:29:24.000Z</updated>
   <id>http://dpruin.github.io/</id>
   
   <author>
@@ -14,6 +14,47 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Xcode8上传AppStore 构建版本不显示问题</title>
+    <link href="http://dpruin.github.io/2017/01/13/appstore_buildversion/"/>
+    <id>http://dpruin.github.io/2017/01/13/appstore_buildversion/</id>
+    <published>2017-01-13T02:30:06.000Z</published>
+    <updated>2017-01-13T03:29:24.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Xcode8上传AppStore-构建版本不显示问题"><a href="#Xcode8上传AppStore-构建版本不显示问题" class="headerlink" title="Xcode8上传AppStore 构建版本不显示问题"></a>Xcode8上传AppStore 构建版本不显示问题</h3><h4 id="问题经过"><a href="#问题经过" class="headerlink" title="问题经过"></a>问题经过</h4><p>使用xcode8打包上传公司的app，app上架–&gt;Archive–&gt;validate–&gt;upload，并且SUCCESSFUL了。官网选项构建版本时蛋疼的事情就来了，构建版本不显示，一致处于如下状态<br><img src="/images/appstore_buildversion_1.png" alt=""></p>
+<p>然后修改版本，重新上传，活动–所有构建版本，显示构建的版本正在处理，过一会又消失了，又不显示此构建版本<br><img src="/images/appstore_buildversion_2.png" alt=""></p>
+<p>提交了多次，等了一宿，第二天构建版本还是没有显示</p>
+<h4 id="参考分析"><a href="#参考分析" class="headerlink" title="参考分析"></a>参考分析</h4><p>参考资料发现，从iOS10开始,苹果更加注重对用于隐私的保护,app里边如果需要访问用户隐私,必须要做隐私权限配置<br><img src="/images/appstore_buildversion_3.png" alt=""></p>
+<h4 id="解决问题"><a href="#解决问题" class="headerlink" title="解决问题"></a>解决问题</h4><ul>
+<li>麦克风权限：Privacy - Microphone Usage Description 是否允许此App使用你的麦克风？</li>
+<li>相机权限： Privacy - Camera Usage Description 是否允许此App使用你的相机？</li>
+<li>相册权限： Privacy - Photo Library Usage Description 是否允许此App访问你的媒体资料库?</li>
+<li>通讯录权限： Privacy - Contacts Usage Description 是否允许此App访问你的通讯录？</li>
+<li>蓝牙权限：Privacy - Bluetooth Peripheral Usage Description 是否许允此App使用蓝牙？</li>
+<li>语音转文字权限：Privacy - Speech Recognition Usage Description 是否允许此App使用语音识别？</li>
+<li>日历权限：Privacy - Calendars Usage Description 是否允许此App使用日历？</li>
+<li>定位权限：Privacy - Location When In Use Usage Description 我们需要通过您的地理位置信息获取您周边的相关数据</li>
+<li>定位权限: Privacy - Location Always Usage Description 我们需要通过您的地理位置信息获取您周边的相关数据</li>
+</ul>
+<p>其中麦克风，相机，相册三项必须添加，不然构建版本还是不显示!!!!</p>
+<p>添加隐私权限配置后，重新上传，过一会儿，构建版本就出现了<br><img src="/images/appstore_buildversion_4.png" alt=""></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;Xcode8上传AppStore-构建版本不显示问题&quot;&gt;&lt;a href=&quot;#Xcode8上传AppStore-构建版本不显示问题&quot; class=&quot;headerlink&quot; title=&quot;Xcode8上传AppStore 构建版本不显示问题&quot;&gt;&lt;/a&gt;Xcode8上传
+    
+    </summary>
+    
+    
+      <category term="Error" scheme="http://dpruin.github.io/tags/Error/"/>
+    
+      <category term="Xcode" scheme="http://dpruin.github.io/tags/Xcode/"/>
+    
+      <category term="AppStore" scheme="http://dpruin.github.io/tags/AppStore/"/>
+    
+  </entry>
   
   <entry>
     <title>Cocopods_Expected identifier or &quot;(&quot;    ,Expected a type</title>
